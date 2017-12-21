@@ -8,11 +8,13 @@ import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
 import android.provider.DocumentsContract;
 import android.provider.MediaStore;
 import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.FileProvider;
 import android.support.v4.content.PermissionChecker;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -85,6 +87,11 @@ public class MainActivity extends AppCompatActivity {
         Intent photoPickerIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
         photoPickerIntent.putExtra(MediaStore.EXTRA_OUTPUT,
                 getOutputMediaFile());
+
+        if(Build.VERSION.SDK_INT >= 24) {
+            photoPickerIntent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
+        }
+
         photoPickerIntent.putExtra("outputFormat",
                 Bitmap.CompressFormat.JPEG.toString());
         startActivityForResult(
@@ -239,7 +246,14 @@ public class MainActivity extends AppCompatActivity {
             Log.d("ImageProcessingActivity", "selected camera path "
                     + selectedOutputPath);
             mediaFile = new File(selectedOutputPath);
-            return Uri.fromFile(mediaFile);
+
+            if(Build.VERSION.SDK_INT >= 24) {
+                Uri photoURI = FileProvider.getUriForFile(this, this.getApplicationContext().getPackageName() + ".my.package.name.provider", mediaFile);
+                return photoURI;
+            }else{
+                return Uri.fromFile(mediaFile);
+            }
+
         } else {
             return null;
         }
