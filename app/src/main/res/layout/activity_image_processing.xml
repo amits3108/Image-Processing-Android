@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#55000000"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@color/colorPrimary"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/close"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_gravity="center|start"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="@string/close_button"
+                android:src="@drawable/ic_close_white"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp" />
+
+            <ImageButton
+                android:id="@+id/undo_text"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_gravity="center|end"
+                android:layout_marginEnd="96dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="@string/text_undo"
+                android:gravity="center"
+                android:src="@drawable/ic_undo_white"
+                android:visibility="visible" />
+
+            <ImageButton
+                android:id="@+id/clear_all"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_gravity="center|end"
+                android:layout_marginEnd="48dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="@string/clear_all_changes"
+                android:gravity="center"
+                android:src="@drawable/ic_layers_clear_white" />
+
+            <ImageButton
+                android:id="@+id/save"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_gravity="center|end"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="@string/save_image"
+                android:gravity="center"
+                android:src="@drawable/ic_save_white"
+                android:textColor="#FFFFFF" />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <RelativeLayout
+                android:id="@+id/parent_image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/photo_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="@string/app_name"
+                    android:scaleType="centerCrop" />
+
+                <com.imageprocessing.widget.BrushDrawingView
+                    android:id="@+id/drawing_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/photo_edit"
+                    android:layout_alignTop="@+id/photo_edit"
+                    android:layout_centerInParent="true"
+                    android:visibility="gone" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/delete_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|bottom"
+                android:padding="20dp"
+                android:visibility="gone">
+
+                <ImageButton
+                    android:id="@+id/delete"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/rounded_border_text_view"
+                    android:contentDescription="@string/delete_view"
+                    android:padding="10dp"
+                    android:src="@drawable/ic_delete_white"
+                    android:textColor="#FFFFFF"
+                    android:textSize="30sp" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|bottom"
+                android:layout_marginBottom="48dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/done_drawing"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp"
+                    android:text="@string/done"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/erase_drawing"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp"
+                    android:text="@string/erase"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/color_picker_recycler"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_gravity="center|bottom" />
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/add_image_emoji"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="@string/add_emoji_and_images"
+                android:padding="15dp"
+                android:src="@drawable/ic_insert_emoticon_white"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp" />
+
+            <ImageButton
+                android:id="@+id/add_pencil"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="@string/add_brush_view"
+                android:padding="15dp"
+                android:src="@drawable/ic_format_color_fill_white"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp" />
+
+            <ImageButton
+                android:id="@+id/add_text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="@string/add_text"
+                android:padding="15dp"
+                android:src="@drawable/ic_text_format_white"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/emoji_bottom_sheet"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="48dp"
+        android:background="#99ffcc80"
+        app:behavior_peekHeight="0dp"
+        app:layout_behavior="@string/bottom_sheet_behavior">
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/emoji_view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </RelativeLayout>
+
+</android.support.design.widget.CoordinatorLayout>

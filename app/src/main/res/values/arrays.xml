@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <integer-array name="image_photos">
+        <item>@drawable/clipart_image_1</item>
+        <item>@drawable/clipart_image_2</item>
+        <item>@drawable/clipart_image_3</item>
+        <item>@drawable/clipart_image_4</item>
+        <item>@drawable/clipart_image_5</item>
+        <item>@drawable/clipart_image_6</item>
+        <item>@drawable/clipart_image_7</item>
+        <item>@drawable/clipart_image_8</item>
+        <item>@drawable/clipart_image_9</item>
+        <item>@drawable/clipart_image_10</item>
+        <item>@drawable/clipart_image_11</item>
+        <item>@drawable/clipart_image_12</item>
+        <item>@drawable/clipart_image_13</item>
+        <item>@drawable/clipart_image_14</item>
+        <item>@drawable/clipart_image_15</item>
+        <item>@drawable/clipart_image_16</item>
+        <item>@drawable/clipart_image_17</item>
+        <item>@drawable/clipart_image_18</item>
+        <item>@drawable/clipart_image_19</item>
+        <item>@drawable/clipart_image_20</item>
+        <item>@drawable/clipart_image_21</item>
+        <item>@drawable/clipart_image_22</item>
+        <item>@drawable/clipart_image_23</item>
+        <item>@drawable/clipart_image_24</item>
+        <item>@drawable/clipart_image_25</item>
+        <item>@drawable/clipart_image_26</item>
+        <item>@drawable/clipart_image_27</item>
+        <item>@drawable/clipart_image_28</item>
+        <item>@drawable/clipart_image_29</item>
+        <item>@drawable/clipart_image_30</item>
+    </integer-array>
+
+    <string-array name="photo_emoji">
+        <item>u+1f600</item>
+        <item>u+1f601</item>
+        <item>u+1f602</item>
+        <item>u+1f603</item>
+        <item>u+1f604</item>
+        <item>u+1f605</item>
+        <item>u+1f606</item>
+        <item>U+1F923</item>
+        <item>u+1f614</item>
+        <item>u+1f60a</item>
+        <item>u+1f60b</item>
+        <item>u+1f60e</item>
+        <item>u+263a</item>
+        <item>u+1f609</item>
+        <item>u+1f60d</item>
+        <item>u+1F642</item>
+        <item>u+1F917</item>
+        <item>u+1F914</item>
+        <item>u+1F644</item>
+        <item>u+1f618</item>
+        <item>u+1f61a</item>
+        <item>u+1f617</item>
+        <item>u+1f619</item>
+        <item>u+1f61c</item>
+        <item>u+1F615</item>
+        <item>u+1f61d</item>
+        <item>u+1f61b</item>
+        <item>u+1f633</item>
+        <item>u+1f60c</item>
+        <item>u+1f612</item>
+        <item>u+1f61e</item>
+        <item>u+1f623</item>
+        <item>u+1f622</item>
+        <item>u+1f62d</item>
+        <item>u+1f62a</item>
+        <item>u+1f625</item>
+        <item>u+1F62E</item>
+        <item>u+1f630</item>
+        <item>u+1f613</item>
+        <item>u+1f629</item>
+        <item>U+1F634</item>
+        <item>u+1f62b</item>
+        <item>u+1f628</item>
+        <item>u+1f631</item>
+        <item>u+1f620</item>
+        <item>u+1f621</item>
+        <item>u+1F607</item>
+        <item>u+1f624</item>
+    </string-array>
+
+</resources>

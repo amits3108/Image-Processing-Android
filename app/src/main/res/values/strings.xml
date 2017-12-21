@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">ImageProcessing</string>
+
+    <string name="done">Done</string>
+    <string name="camera">Camera</string>
+    <string name="gallery">Gallery</string>
+    <string name="Choose">Choose Pickup Type</string>
+    <string name="upload_picker_title">Select Picture</string>
+    <string name="directory_create_fail">Failed to create directory</string>
+    <string name="permission_denied_msg">You denied storage access</string>
+    <string name="choose_image">Choose Image</string>
+    <string name="erase">Erase</string>
+    <string name="title_activity_image_processing">ImageProcessingActivity</string>
+
+    //Content Description
+    <string name="close_button">close button</string>
+    <string name="text_undo">Text Undo</string>
+    <string name="clear_all_changes">Clear all Changes</string>
+    <string name="save_image">Save Image</string>
+    <string name="delete_view">Delete View</string>
+    <string name="add_emoji_and_images">Add emoji and images</string>
+    <string name="add_brush_view">Add brush view</string>
+    <string name="add_text">Add text</string>
+    <string name="colour_view">Colour View</string>
+    <string name="image_picker">Image picker</string>
+
+</resources>
